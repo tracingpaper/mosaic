@@ -1,0 +1,53 @@
+/*
+* This is the project's main stylesheet.
+* Import all the external stylesheets for this project into this stylesheet
+* The space for your custom styles is provided
+* You can either write the complete code there or
+* Split the styling to modules and import them seperately.
+*
+* Note: Make sure all the stylesheets are imported.
+* Only imported styles get compiled. To compile scss only run command:
+*
+*       +-----------------+
+*       |    gulp sass    |
+*       +-----------------+
+*
+* -> For theming UIKit use '_variables.scss' and '_hooks.scss'
+* -> For including more fonts use '_fonts.scss'
+* -> For more info on UIKit refer https://getuikit.com/docs/sass
+*/
+
+
+// import required fonts //
+@import "fonts";
+
+// import customized variables //
+@import "variables";
+
+// Import default variables and available mixins.
+@import "../../../node_modules/uikit/src/scss/variables-theme.scss";
+@import "../../../node_modules/uikit/src/scss/mixins-theme.scss";
+
+// import custom mixin overrites (hooks)
+@import "hooks";
+
+// Import UIkit.
+@import "../../../node_modules/uikit/src/scss/uikit-theme.scss";
+
+// Write your custom styles below //
+
+// You can either write the complete code there or
+// Split the styling to modules and import them seperately.
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    background: darken($muted, 10%)
+}
+
+.vh-100 {
+    height: 100vh;
+} // <- You can remove this if you need

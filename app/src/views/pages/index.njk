@@ -1,0 +1,36 @@
+{% extends "layouts/app.layout.njk" %}
+
+{% block content %}
+
+    <div class="uk-flex uk-flex-column vh-100">
+
+        {% import "macros/navbar.macro.njk" as navbar %}
+        {{ navbar.nav(app, 'home') }}
+
+        <div class="uk-container uk-margin-auto-vertical uk-text-center">
+            
+            <div class="uk-heading-hero">Welcome!</div>
+            <div class="uk-margin-medium-top">
+                <div class="uk-text-lead uk-text-muted">This is a starter page setup for your Jigsaw project. Start editing <span class="uk-text-primary">index.njk</span> to get started.</div>
+            </div>
+            
+            <div class="uk-margin-large-top">
+                <a class="uk-button uk-button-primary uk-button-large"><i uk-icon="icon: github" class="uk-margin-right"></i> View in Github</a>
+            </div>
+
+        </div>
+
+        <div class="uk-section uk-section-muted">
+            <div class="uk-container uk-text-center uk-flex uk-flex-between">
+                <a href="https://mozilla.github.io/nunjucks/getting-started.html" class="uk-link-muted uk-padding-small"><i class="fa fa-book"></i>  Read Nunjucks Docs</a>
+                <a href="https://sass-lang.com/guide" class="uk-link-muted uk-padding-small"><i class="fab fa-sass"></i>  Read Sass Docs</a>
+                <a href="https://getuikit.com/docs/" class="uk-link-muted uk-padding-small"><i class="fab fa-uikit"></i>  Read UIKit Docs</a>
+            </div>
+        </div>
+
+        <div class="footer uk-section uk-text-center uk-padding-small uk-text-small">
+            Hand Crafted with <span class="uk-text-danger"><i class="fa fa-heart"></i></span> by <a class="uk-link-muted" href="https://www.instagram.com/tracingpaperofficial">Tracing Paper</a>
+        </div>
+    
+    </div>
+{% endblock %}

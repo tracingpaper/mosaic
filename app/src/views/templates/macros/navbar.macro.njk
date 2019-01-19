@@ -1,0 +1,27 @@
+{% macro nav(app, activePage = 'home') %}
+<nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
+    <div class="uk-navbar-left">
+
+        <a href="{{app.url}}" class="uk-navbar-item uk-logo uk-text-primary uk-text-bold">
+            <i class="fa fa-puzzle-piece uk-margin-right"></i>{{app.title}}
+        </a>
+
+    </div>
+
+    <div class="uk-navbar-right">
+
+        <ul class="uk-navbar-nav">
+            <li class="{% if activePage == 'home' %}uk-active{%- endif %}">
+                <a href="#">Home</a>
+            </li>
+            <li class="{% if activePage == 'about' %}uk-active{%- endif %}">
+                <a href="#">About</a>
+            </li>
+            <li class="{% if activePage == 'contact' %}uk-active{%- endif %}">
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+        
+    </div>
+</nav>
+{%- endmacro %}
