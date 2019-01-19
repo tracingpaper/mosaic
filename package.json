@@ -1,14 +1,14 @@
 {
-  "name": "gulp-nunjucks-skeleton",
+  "name": "jigsaw",
   "version": "1.0.0",
-  "description": "A starter setup for building static sites using gulp and nunjucks",
+  "description": "A static sitebuilder framework built from gulp, nunjucks, browserify, sass and UIKit",
   "main": "app/dist/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tracingpaper/gulp-nunjucks-skeleton.git"
+    "url": "git+https://github.com/tracingpaper/jigsaw.git"
   },
   "keywords": [
     "gulp",
@@ -21,9 +21,9 @@
   "author": "Tracing Paper",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tracingpaper/gulp-nunjucks-skeleton/issues"
+    "url": "https://github.com/tracingpaper/jigsaw/issues"
   },
-  "homepage": "https://github.com/tracingpaper/gulp-nunjucks-skeleton#readme",
+  "homepage": "https://github.com/tracingpaper/jigsaw#readme",
   "devDependencies": {
     "browserify": "^16.2.3",
     "gulp": "^4.0.0",

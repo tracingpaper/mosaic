@@ -1,2 +1,5 @@
-# gulp-nunjucks-skeleton
-A starter setup for building static sites using gulp and nunjucks
+# Jigsaw
+
+A static sitebuilder framework built from gulp, nunjucks, browserify, sass and UIKit
+
+More docs coming ...
