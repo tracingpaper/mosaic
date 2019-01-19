@@ -4,6 +4,13 @@ try {
 }
 catch(e){}
 
+//lodash
+
+try {
+    window._ = require('lodash');
+}
+catch(e) {}
+
 
 //UIKit
 try {
