@@ -1,6 +1,6 @@
 {
     "app": {
-        "title": "Jigsaw",
+        "title": "Mosaic",
         "description": "A static sitebuilder framework built from gulp, nunjucks, browserify, sass and UIKit",
         "keywords": "tracing paper, jigsaw,design,logo,print,graphic,web design,web development",
         "url": "localhost:4000",

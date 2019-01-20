@@ -1,5 +1,5 @@
 {
-  "name": "jigsaw",
+  "name": "mosaic",
   "version": "1.0.0",
   "description": "A static sitebuilder framework built from gulp, nunjucks, browserify, sass and UIKit",
   "main": "app/dist/index.html",
