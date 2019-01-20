@@ -2,6 +2,8 @@
 
 A static sitebuilder framework built from gulp, nunjucks, browserify, sass and UIKit
 
+<img src="https://svgur.com/i/Aef.svg" width="196px">
+
 ## Content
 
 - [Installation](#installation)
@@ -123,9 +125,7 @@ Contains configuration information for the project. This file can also be used t
 {
     "app": {
         "title": "Mosaic",
-        ...
     }
-    ...
 }
 ```
 *app.layout.njk*
@@ -134,7 +134,7 @@ Contains configuration information for the project. This file can also be used t
 <html>
     <head>
         ...
-        <title>{{app.title}}</title>
+        <title>{{app.title}}</title> <!-- Compiled to <title>Mosaic</title> -->
         ...
     </head>
     ...
