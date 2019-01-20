@@ -1,9 +1,11 @@
 {% macro nav(app, activePage = 'home') %}
-<nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
+<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
     <div class="uk-navbar-left">
-
-        <a href="{{app.url}}" class="uk-navbar-item uk-logo uk-text-primary uk-text-bold">
-            <i class="fa fa-puzzle-piece uk-margin-right"></i>{{app.title}}
+        <a href="{{app.url}}" class="uk-navbar-item">
+            <img src="{{app.logo}}" alt="{{app.title}}" width="32px" uk-img>
+        </a>
+        <a href="{{app.url}}" class="uk-navbar-item uk-logo uk-text-secondary uk-visible@m">
+            {{app.title}}
         </a>
 
     </div>

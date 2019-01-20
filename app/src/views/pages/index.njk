@@ -15,22 +15,38 @@
             </div>
             
             <div class="uk-margin-large-top">
-                <a class="uk-button uk-button-primary uk-button-large"><i uk-icon="icon: github" class="uk-margin-right"></i> View in Github</a>
+                <a href="https://github.com/tracingpaper/mosaic" class="uk-button uk-button-primary uk-button-large"><i uk-icon="icon: github" class="uk-margin-right"></i> View in Github</a>
             </div>
 
         </div>
 
         <div class="uk-section uk-section-muted">
-            <div class="uk-container uk-text-center uk-flex uk-flex-between">
-                <a href="https://mozilla.github.io/nunjucks/getting-started.html" class="uk-link-muted uk-padding-small"><i class="fa fa-book"></i>  Read Nunjucks Docs</a>
-                <a href="https://sass-lang.com/guide" class="uk-link-muted uk-padding-small"><i class="fab fa-sass"></i>  Read Sass Docs</a>
-                <a href="https://getuikit.com/docs/" class="uk-link-muted uk-padding-small"><i class="fab fa-uikit"></i>  Read UIKit Docs</a>
+            <div class="uk-container">
+                <div uk-grid>
+
+                    <div class="uk-width-1-1 uk-width-1-3@m uk-text-center">
+                        <a href="https://mozilla.github.io/nunjucks/getting-started.html" class="uk-link-muted uk-padding-small">
+                            <i class="fa fa-book"></i>  Read Nunjucks Docs
+                        </a>
+                    </div>
+
+                    <div class="uk-width-1-1 uk-width-1-3@m uk-text-center">
+                        <a href="https://sass-lang.com/guide" class="uk-link-muted uk-padding-small">
+                            <i class="fab fa-sass"></i>  Read Sass Docs
+                        </a>
+                    </div>
+
+                    <div class="uk-width-1-1 uk-width-1-3@m uk-text-center">
+                        <a href="https://getuikit.com/docs/" class="uk-link-muted uk-padding-small">
+                            <i class="fab fa-uikit"></i>  Read UIKit Docs
+                        </a>
+                    </div>
+
+                </div>
             </div>
         </div>
 
-        <div class="footer uk-section uk-text-center uk-padding-small uk-text-small">
-            Hand Crafted with <span class="uk-text-danger"><i class="fa fa-heart"></i></span> by <a class="uk-link-muted" href="https://www.instagram.com/tracingpaperofficial">Tracing Paper</a>
-        </div>
+        {% include "partials/footer.partial.njk" %}
     
     </div>
 {% endblock %}

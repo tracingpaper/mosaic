@@ -7,14 +7,14 @@
     <meta name="description" content="A static sitebuilder framework built from gulp, nunjucks, browserify, sass and UIKit">
     <meta name="keywords" content="tracing paper, jigsaw,design,logo,print,graphic,web design,web development">
     <!-- Open Graph -->
-    <meta property="og:title" content="Jigsaw">
+    <meta property="og:title" content="Mosaic">
     <meta name="og:type" content="website">
     <meta name="og:url" content="localhost:4000">
     <meta name="og:image" content="/assets/images/logo.svg">
 
     <!-- Recommended -->
-    <meta property="og:site_name" content="Jigsaw">
-    <meta name="twitter:image:alt" content="Jigsaw">
+    <meta property="og:site_name" content="Mosaic">
+    <meta name="twitter:image:alt" content="Mosaic">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
@@ -22,7 +22,7 @@
     <!-- Robots -->
     <meta name="robots" content="index, follow">
 
-    <title>Jigsaw</title>
+    <title>Mosaic</title>
 
     <!-- FontAwesom -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
@@ -42,11 +42,13 @@
 
         
         
-<nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
+<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
     <div class="uk-navbar-left">
-
-        <a href="localhost:4000" class="uk-navbar-item uk-logo uk-text-primary uk-text-bold">
-            <i class="fa fa-puzzle-piece uk-margin-right"></i>Jigsaw
+        <a href="localhost:4000" class="uk-navbar-item">
+            <img src="/assets/images/logo.svg" alt="Mosaic" width="32px" uk-img>
+        </a>
+        <a href="localhost:4000" class="uk-navbar-item uk-logo uk-text-secondary uk-visible@m">
+            Mosaic
         </a>
 
     </div>
@@ -76,22 +78,58 @@
             </div>
             
             <div class="uk-margin-large-top">
-                <a class="uk-button uk-button-primary uk-button-large"><i uk-icon="icon: github" class="uk-margin-right"></i> View in Github</a>
+                <a href="https://github.com/tracingpaper/mosaic" class="uk-button uk-button-primary uk-button-large"><i uk-icon="icon: github" class="uk-margin-right"></i> View in Github</a>
             </div>
 
         </div>
 
         <div class="uk-section uk-section-muted">
-            <div class="uk-container uk-text-center uk-flex uk-flex-between">
-                <a href="https://mozilla.github.io/nunjucks/getting-started.html" class="uk-link-muted uk-padding-small"><i class="fa fa-book"></i>  Read Nunjucks Docs</a>
-                <a href="https://sass-lang.com/guide" class="uk-link-muted uk-padding-small"><i class="fab fa-sass"></i>  Read Sass Docs</a>
-                <a href="https://getuikit.com/docs/" class="uk-link-muted uk-padding-small"><i class="fab fa-uikit"></i>  Read UIKit Docs</a>
+            <div class="uk-container">
+                <div uk-grid>
+
+                    <div class="uk-width-1-1 uk-width-1-3@m uk-text-center">
+                        <a href="https://mozilla.github.io/nunjucks/getting-started.html" class="uk-link-muted uk-padding-small">
+                            <i class="fa fa-book"></i>  Read Nunjucks Docs
+                        </a>
+                    </div>
+
+                    <div class="uk-width-1-1 uk-width-1-3@m uk-text-center">
+                        <a href="https://sass-lang.com/guide" class="uk-link-muted uk-padding-small">
+                            <i class="fab fa-sass"></i>  Read Sass Docs
+                        </a>
+                    </div>
+
+                    <div class="uk-width-1-1 uk-width-1-3@m uk-text-center">
+                        <a href="https://getuikit.com/docs/" class="uk-link-muted uk-padding-small">
+                            <i class="fab fa-uikit"></i>  Read UIKit Docs
+                        </a>
+                    </div>
+
+                </div>
             </div>
         </div>
 
-        <div class="footer uk-section uk-text-center uk-padding-small uk-text-small">
+        <div class="footer uk-section uk-padding-small uk-text-small">
+    <div uk-grid>
+        <div class="uk-text-center uk-text-left@m uk-width-1-1 uk-width-1-3@m">
+            Copyright 2018 &copy; Tracing Paper. All rights reserved
+        </div>
+        <div class="uk-text-center uk-width-1-1 uk-width-1-3@m">
             Hand Crafted with <span class="uk-text-danger"><i class="fa fa-heart"></i></span> by <a class="uk-link-muted" href="https://www.instagram.com/tracingpaperofficial">Tracing Paper</a>
         </div>
+        <div class="uk-text-center uk-text-right@m uk-width-1-1 uk-width-1-3@m">
+            <a href="https://www.facebook.com/tracingpaperofficial" class="uk-link-muted uk-padding-small">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.facebook.com/tracingpaperz" class="uk-link-muted uk-padding-small">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/tracingpaperofficial" class="uk-link-muted uk-padding-small">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</div>
     
     </div>
 
