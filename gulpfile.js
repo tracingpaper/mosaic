@@ -6,6 +6,7 @@ const njkRender = require('gulp-nunjucks-render');
 const connect = require("gulp-connect");
 const sass = require('gulp-sass');
 const gutil = require('gulp-util');
+const fs = require('fs');
 
 /**
  * HIGHLY RECOMMEND NOT TO EDIT THIS FILE
@@ -74,8 +75,13 @@ gulp.task("nunjucks", function() {
 gulp.task('browserify', function () {
     //log
     gutil.log("=> Building js files");
+    // babel options
+    const options = JSON.parse(fs.readFileSync("./.babelrc", "utf8"));
     //browserify
     return browserify(SOURCE.js)
+        //babelify
+        .transform("babelify", options)
+        //bundle
         .bundle()
         //Convert to gulp stream
         .pipe(source('app.js'))

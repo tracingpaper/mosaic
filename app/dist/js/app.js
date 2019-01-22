@@ -1,42 +1,30 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-// require bootstrap js
-require('./bootstrap');
+"use strict";
 
-/*
-* You can add your custom JavaScript below.
-* You can either start writing the entire code below or
-* Divide the code into seperate modules and require them below.
-* 
-* Note: Make sure you import (require) all the modules inside this file.
-* 
-* Use bootstrap.js to require node packages.
-*/
+require("./bootstrap");
 
 },{"./bootstrap":2}],2:[function(require,module,exports){
+"use strict";
+
+var _jquery = _interopRequireDefault(require("jquery"));
+
+var _lodash = _interopRequireDefault(require("lodash"));
+
+var _uikit = _interopRequireDefault(require("uikit"));
+
+var _uikitIcons = _interopRequireDefault(require("uikit/dist/js/uikit-icons"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 // jQuery
-try {
-    window.jQuery = window.$ = require('jquery');
-}
-catch(e){}
+window.jQuery = window.$ = _jquery.default; //lodash
 
-//lodash
+window._ = _lodash.default; //UIKit
 
-try {
-    window._ = require('lodash');
-}
-catch(e) {}
+_uikit.default.use(_uikitIcons.default);
 
+window.UIKit = _uikit.default; // Add more bootstrap packages here
 
-//UIKit
-try {
-    const UIKit = require("uikit");
-    const Icons = require("uikit/dist/js/uikit-icons");
-
-    UIKit.use(Icons);
-
-    window.UIKit = UIKit;
-}
-catch(e) {}
 },{"jquery":3,"lodash":4,"uikit":8,"uikit/dist/js/uikit-icons":7}],3:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.3.1

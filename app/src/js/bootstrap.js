@@ -1,24 +1,17 @@
 // jQuery
-try {
-    window.jQuery = window.$ = require('jquery');
-}
-catch(e){}
+import $ from "jquery";
+window.jQuery = window.$ = $;
 
 //lodash
-
-try {
-    window._ = require('lodash');
-}
-catch(e) {}
-
+import _ from "lodash";
+window._ = _;
 
 //UIKit
-try {
-    const UIKit = require("uikit");
-    const Icons = require("uikit/dist/js/uikit-icons");
+import UIKit from "uikit";
+import Icons from "uikit/dist/js/uikit-icons";
 
-    UIKit.use(Icons);
+UIKit.use(Icons);
 
-    window.UIKit = UIKit;
-}
-catch(e) {}
+window.UIKit = UIKit;
+
+// Add more bootstrap packages here

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tracingpaper/jigsaw.git"
+    "url": "git+https://github.com/tracingpaper/mosaic.git"
   },
   "keywords": [
     "gulp",
@@ -21,10 +21,13 @@
   "author": "Tracing Paper",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tracingpaper/jigsaw/issues"
+    "url": "https://github.com/tracingpaper/mosaic/issues"
   },
-  "homepage": "https://github.com/tracingpaper/jigsaw#readme",
+  "homepage": "https://github.com/tracingpaper/mosaic#readme",
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babelify": "^10.0.0",
     "browserify": "^16.2.3",
     "gulp": "^4.0.0",
     "gulp-connect": "^5.7.0",
