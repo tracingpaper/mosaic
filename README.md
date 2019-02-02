@@ -2,15 +2,14 @@
 
 A static sitebuilder framework built from gulp, nunjucks, browserify, sass and UIKit.
 
+<img src="https://svgur.com/i/Aef.svg" width="196px">
+
 *Version Changes: 1.2.0*
 - Added css module support for browserify
 
 *Version Changes: 1.1.0*
 - Added babel support
 - Added minification of js.
-
-<img src="https://svgur.com/i/Aef.svg" width="196px">
-
 
 ## Content
 
