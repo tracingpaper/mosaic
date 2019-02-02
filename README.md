@@ -1,8 +1,16 @@
-# Mosaic
+# Mosaic ![](https://img.shields.io/github/tag/tracingpaper/mosaic.svg?style=flat)
 
-A static sitebuilder framework built from gulp, nunjucks, browserify, sass and UIKit
+A static sitebuilder framework built from gulp, nunjucks, browserify, sass and UIKit.
+
+*Version Changes: 1.2.0*
+- Added css module support for browserify
+
+*Version Changes: 1.1.0*
+- Added babel support
+- Added minification of js.
 
 <img src="https://svgur.com/i/Aef.svg" width="196px">
+
 
 ## Content
 
@@ -79,6 +87,8 @@ Visit [localhost:4000]("http://localhost:4000") to see the result.
                 - partials
     - config.json
 - gulpfile.js
+- .babelrc
+- mosaic.json
 
 ### gulpfile.js
 This file contains all the compilation logics of the framework. *It is recommend not to edit this file*
@@ -141,7 +151,18 @@ Contains configuration information for the project. This file can also be used t
 </html> 
 ```
 
+### .babelrc
+
+Babel configuration file.
+This file can be used to include plugins and presets into babel.
+*(Read more on [Babel](https://babeljs.io/))*
+
 *Open each of these files for better understanding*.
+
+### mosaic.json
+
+Mosaic configuration file.
+*(Limited configuration options available for now)*
 
 ## Using UIKit
 UIKit is already setup for you to use and customize.

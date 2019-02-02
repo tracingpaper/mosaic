@@ -1,0 +1,9 @@
+{
+    "liveServer": {
+        "port": 4000
+    },
+    "outDir": "./app/dist",
+    "sass": {
+        "outputStyle": "compressed"
+    }
+}

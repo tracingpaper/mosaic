@@ -7,6 +7,9 @@ const connect = require("gulp-connect");
 const sass = require('gulp-sass');
 const gutil = require('gulp-util');
 const fs = require('fs');
+const uglify = require('gulp-uglify');
+const buffer = require('vinyl-buffer');
+const mosaic = require('./mosaic.json');
 
 /**
  * HIGHLY RECOMMEND NOT TO EDIT THIS FILE
@@ -31,9 +34,9 @@ const SOURCE = {
 
 //DESTINATIONS
 const DEST = {
-    nunjucks: 'app/dist',
-    js: 'app/dist/js',
-    scss: "app/dist/css"
+    nunjucks: mosaic.outDir,
+    js: `${mosaic.outDir}/js`,
+    scss: `${mosaic.outDir}/css`
 };
 
 // WATCH
@@ -81,10 +84,24 @@ gulp.task('browserify', function () {
     return browserify(SOURCE.js)
         //babelify
         .transform("babelify", options)
+        // css loader
+        .transform('browserify-css', {
+            minify: true,
+            global: true,
+            onFlush: function(options, done) {
+                fs.appendFileSync('./app/dist/css/bundle.css', options.data);
+                // Do not embed CSS into a JavaScript bundle
+                done(null);
+            }
+        })
         //bundle
         .bundle()
         //Convert to gulp stream
         .pipe(source('app.js'))
+        //convert to buffer
+        .pipe(buffer())
+        //uglify
+        .pipe(uglify())
         //output to dist
         .pipe(gulp.dest(DEST.js))
         //livereload
@@ -103,7 +120,7 @@ gulp.task("sass", function () {
     return (
         gulp.src(SOURCE.scss)
         //catch error
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass(mosaic.sass).on('error', sass.logError))
         //output to dist/css
         .pipe(gulp.dest(DEST.scss))
         //livereload
@@ -135,8 +152,7 @@ gulp.task('build', gulp.series('nunjucks', 'sass', 'browserify'));
 
 
 // live server port number
-const PORT = 4000;
-
+const PORT = mosaic.liveServer.port;
 
 /*
 * Starts a liveserver at port: PORT
