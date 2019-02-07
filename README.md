@@ -125,16 +125,16 @@ It includes 3 sub-directories:
 
 *Note: To know more about these refer [Nunjucks Documentation](https://mozilla.github.io/nunjucks/templating.html).
 
-### config.json
-Contains configuration information for the project. This file can also be used to include context variables into nunjucks templates.
+### config
+Contains configuration information for the project. There are two files *app.json* and *data.json*.
+
+Data in app.json can be accessed via global *'app'* object and that in data.json via *'data'* object.
 
 #### Example:
-*config.json*
+*config/app.json*
 ```json
 {
-    "app": {
-        "title": "Mosaic",
-    }
+    "title": "Mosaic",
 }
 ```
 *app.layout.njk*
