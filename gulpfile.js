@@ -58,7 +58,10 @@ gulp.task("nunjucks", function() {
         gulp.src(SOURCE.pages)
         //add data
         .pipe(data(function() {
-            return require("./app/config.json");
+            return {
+                app: require("./app/config/app.json"),
+                data: require("./app/config/data.json")
+            }
         }))
         // render nunjuck template files
         .pipe(njkRender({
